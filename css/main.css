@@ -85,7 +85,7 @@ body {
 		background-image: url(../image/landing\(3\).jpg);
 	}
 	99% {
-		background-image: url(../image/landing\(1\).jpg);
+		background-image: url(../image/landing\(2\).jpg);
 	}
 }
 @keyframes bullet {
@@ -300,8 +300,6 @@ header .container nav .form::before {
 	border-radius: 50%;
 	border: solid white 1px;
 	animation: bullet 15s linear infinite;
-}
-.landing ul.bullets li:first-of-type {
 }
 .landing ul.bullets li:nth-last-of-type(2) {
 	animation-delay: 5s;
