@@ -315,6 +315,7 @@ header .container nav .form::before {
 }
 .Services .container .Services-content .ser {
 	text-align: center;
+	
 }
 .Services .container .Services-content .ser h3 {
 	color: var(--main-color);
@@ -393,10 +394,10 @@ header .container nav .form::before {
 		width: 100%;
 	}
 	.design .text ul li {
-		margin-left: 130px;
+		margin-left: 150px;
 	}
 	.design .text h3 {
-		margin-left: 69px;
+		margin-left: 100px;
 	}
 }
 /* End Design */
