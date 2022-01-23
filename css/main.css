@@ -317,6 +317,9 @@ header .container nav .form::before {
 	text-align: center;
 	
 }
+.Services .container .Services-content .ser i {
+        Color: var(--main-color);
+} 
 .Services .container .Services-content .ser h3 {
 	color: var(--main-color);
 	margin-bottom: 30px;
@@ -339,7 +342,10 @@ header .container nav .form::before {
 		gap: 45px;
 		text-align: left;
 	}
-}
+	 .container .Services-content .ser i {
+		 Padding-bottom:10px;		
+        }
+} 
 /* End Services */
 /* Start Design */
 .design {
