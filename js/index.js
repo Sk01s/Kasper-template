@@ -28,3 +28,4 @@ arrowBtn.forEach((el) => {
 		bullets[arrNum].classList.add("active");
 	});
 });
+let you = document.querySelector("a");
