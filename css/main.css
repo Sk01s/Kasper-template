@@ -76,25 +76,6 @@ body {
 	margin: 0px auto;
 }
 /* End component */
-/* Start Animation */
-@keyframes landing {
-	33% {
-		background-image: url(../image/landing\(1\).jpg);
-	}
-	66% {
-		background-image: url(../image/landing\(3\).jpg);
-	}
-	99% {
-		background-image: url(../image/landing\(2\).jpg);
-	}
-}
-@keyframes bullet {
-	50% {
-		background-color: var(--main-color);
-	}
-}
-
-/* End Animation */
 /* Small */
 @media (min-width: 768px) {
 	.container {
@@ -162,7 +143,7 @@ header .container nav ul {
 	header .container nav ul {
 		display: none;
 	}
-	header .container nav .toggle-menu:hover + ul {
+	header .container nav .toggle-menu.active + ul {
 		width: fit-content;
 		display: flex;
 		flex-flow: column;
@@ -218,18 +199,21 @@ header .container nav .form::before {
 .landing {
 	min-height: 100vh;
 	background-color: #1f2021;
-	background-image: url(../image/landing\(2\).jpg);
+	background-image: url(../image/landing\(1\).jpg);
 	background-size: cover;
 	background-position: right;
 	position: relative;
-	animation: landing 15s infinite forwards linear alternate;
+	z-index: 1;
+	transition: var(--anim-time);
 }
-.landing .overlay {
+.landing::after {
+	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	z-index: -1;
 	background-color: rgb(0 0 0 / 35%);
 }
 .landing .text {
@@ -243,6 +227,8 @@ header .container nav .form::before {
 	padding: 50px;
 	display: flex;
 	justify-content: flex-end;
+	max-height: 65%;
+	overflow: hidden;
 }
 .landing .text .content {
 	max-width: 500px;
@@ -271,6 +257,8 @@ header .container nav .form::before {
 	top: 50%;
 	transform: translateY(-50%);
 	color: white;
+	cursor: pointer;
+	z-index: 9999;
 }
 .landing i.fa-angle-left {
 	left: 20px;
@@ -293,13 +281,18 @@ header .container nav .form::before {
 	margin-bottom: 30px;
 	width: 100px;
 	transform: translateX(45%);
+	transition: var(--anim-time);
 }
 .landing ul.bullets li {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
+	transition: var(--anim-time);
 	border: solid white 1px;
 	animation: bullet 15s linear infinite;
+}
+.landing ul.bullets li.active {
+	background-color: var(--main-color);
 }
 .landing ul.bullets li:nth-last-of-type(2) {
 	animation-delay: 5s;
@@ -315,14 +308,13 @@ header .container nav .form::before {
 }
 .Services .container .Services-content .ser {
 	text-align: center;
-	
 }
 .Services .container .Services-content .ser i {
-        Color: var(--main-color);
-} 
+	color: var(--main-color);
+}
 .Services .container .Services-content .ser h3 {
 	color: var(--main-color);
-	margin-bottom: 30px;
+	margin-block: 30px;
 }
 .Services .container .Services-content .ser p {
 	margin-bottom: 30px;
@@ -342,10 +334,11 @@ header .container nav .form::before {
 		gap: 45px;
 		text-align: left;
 	}
-	 .container .Services-content .ser i {
-		 Padding-bottom:10px;		
-        }
-} 
+	.Services .container .Services-content .ser h3 {
+		margin-top: 0px;
+		margin-bottom: 30px;
+	}
+}
 /* End Services */
 /* Start Design */
 .design {
@@ -397,7 +390,7 @@ header .container nav .form::before {
 }
 @media (max-width: 678px) {
 	.design .text {
-		width: 100%;
+		min-width: 125%;
 	}
 	.design .text ul li {
 		margin-left: 150px;

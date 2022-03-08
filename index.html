@@ -10,7 +10,10 @@
 		<link rel="stylesheet" href="./css/main.css" />
 		<!-- Font Awesome css file -->
 		<link rel="stylesheet" href="./css/all.min.css" />
+		<!-- JavaScript file -->
+		<script src="js/index.js" async></script>
 		<title>Kasper | Template Two</title>
+		<link rel="icon" href="./image/logo.png" />
 	</head>
 	<body>
 		<!-- Start Header -->
@@ -20,7 +23,7 @@
 					<img src="./image/logo.png" alt="logo" />
 				</a>
 				<nav>
-					<i class="fas fa-bars toggle-menu"></i>
+					<i data-menu class="fas fa-bars toggle-menu"></i>
 					<ul>
 						<li><a class="active" href="#">Home</a></li>
 						<li><a href="#Services">Services</a></li>
@@ -37,8 +40,9 @@
 		</header>
 		<!-- End Header -->
 		<!-- Start landing -->
-		<div class="landing">
-			<div class="overlay"></div>
+		<div data-landing class="landing">
+			<i data-arr="after" class="fas fa-angle-right change-background"></i>
+			<i data-arr="before" class="fas fa-angle-left change-background"></i>
 			<div class="text">
 				<div class="content">
 					<h2>
@@ -52,12 +56,10 @@
 					</p>
 				</div>
 			</div>
-			<i class="fas fa-angle-left change-background"></i>
-			<i class="fas fa-angle-right change-background"></i>
-			<ul class="bullets">
-				<li></li>
-				<li class="active"></li>
-				<li></li>
+			<ul data-bullets class="bullets">
+				<li class="active" data-num="0"></li>
+				<li data-num="1"></li>
+				<li data-num="2"></li>
 			</ul>
 		</div>
 		<!-- End landing -->
