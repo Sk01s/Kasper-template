@@ -97,17 +97,24 @@ body {
 /* start header */
 
 header {
-	margin-top: 10px;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	width: 100%;
 	z-index: 2;
+	margin-top: 0;
+}
+header.in {
+	margin-top: 10px;
 }
 header .container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
+	background-color: #a2a2a2;
+}
+header.in .container {
+	background-color: transparent;
 }
 header .container::after {
 	content: "";
@@ -423,12 +430,13 @@ header .container nav .form::before {
 .Portfolio .img-container {
 	display: flex;
 	flex-flow: wrap;
-	gap: 5px 0px;
+	gap: 5px;
 }
 .Portfolio .img-container .box {
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+	border-radius: 20px;
 }
 @media (min-width: 768px) {
 	.Portfolio .img-container .box {
