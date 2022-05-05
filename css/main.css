@@ -898,7 +898,8 @@ header .container nav .form::before {
 /* Start subscibe */
 .subscribe {
   padding: 60px 0;
-  background: url(../image/Subscribe.webp);
+  background-color: #222;
+  background-image: url(../image/Subscribe.webp);
   background-size: cover;
   background-position: center;
   display: flex;
